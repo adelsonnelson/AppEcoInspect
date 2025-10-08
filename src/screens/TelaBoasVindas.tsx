@@ -3,14 +3,13 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebaseConfig';
 
-// O nome do componente também foi alterado
+
 const TelaBoasVindas = ({ navigation }: any) => {
   
   const handleLogout = () => {
     signOut(auth).then(() => {
         navigation.navigate('Login');
     }).catch((error) => {
-        // Tratar erro aqui se necessário
     });
   }
 
@@ -29,5 +28,4 @@ const styles = StyleSheet.create({
   subtitle: { fontSize: 18, color: 'gray' }
 });
 
-// A exportação default também foi atualizada
 export default TelaBoasVindas;

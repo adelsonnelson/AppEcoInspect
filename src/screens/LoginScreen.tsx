@@ -10,7 +10,6 @@ const LoginScreen = ({ navigation }: any) => {
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // ALTERAÇÃO AQUI: Navega para 'BoasVindas'
         navigation.navigate('BoasVindas');
       })
       .catch((error) => {
@@ -37,7 +36,6 @@ const LoginScreen = ({ navigation }: any) => {
         secureTextEntry
       />
       <Button title="Entrar" onPress={handleLogin} color="#2E8B57" />
-      {/* ALTERAÇÃO AQUI: Navega para 'Cadastro' */}
       <Button title="Não tem uma conta? Cadastre-se" onPress={() => navigation.navigate('Cadastro')} />
     </View>
   );
